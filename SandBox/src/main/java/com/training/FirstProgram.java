@@ -1,3 +1,5 @@
+package com.training;
+
 public class FirstProgram {
 
 	public static void main(String[] args){
