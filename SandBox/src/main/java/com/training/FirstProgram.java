@@ -6,25 +6,25 @@ public class FirstProgram {
 		System.out.println("Hello,World!");
 		hello("Mike");
 
-		double l=6.0;
-		System.out.println("Area of the cube with the side of  "+l+ " = " + area(l));
-		double c=6.0;
-		double d=5.0;
-		System.out.println("Area of the cube with the sides of  "+ c + " and " + d +  " = " + area(c,d));
+//create class and object
+        Square s=new Square(6);
+
+		System.out.println("Area of the cube with the side of  "+s.len+ " = " + s.area());
+
+//Create class and object. YOu can
+
+		Rectangle r=new Rectangle(5,6);
+
+		System.out.println("Area of the cube with the sides of  "+ r.a + " and " + r.b +  " = " + r.area());
 
 	}
+
 
 	public static void hello (String somebody){
 		System.out.println("Hello " +somebody+" !");
 	}
 
-	public static double area(double l){
-		return l*l;
-	}
 
-	public static double area(double a, double b){
-		return a*b;
-	}
 
 }
 
