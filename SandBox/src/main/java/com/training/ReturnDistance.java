@@ -5,7 +5,7 @@ package com.training;
  */
 public class ReturnDistance {
     public static void main(String[] args){
-        Point p= new Point(2,6,2,8);
+        Point p= new Point(2,4,2,6);
 
         System.out.println("Distance between "+ "A ("+p.x1+","+ p.x2 + ") and "+ "B ("+p.y1+","+ p.y2 + ") is equal to "+ p.calculateDistance());
 

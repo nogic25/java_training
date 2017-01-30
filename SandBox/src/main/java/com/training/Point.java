@@ -26,7 +26,7 @@ public class Point {
        this.distancey = (y2 - y1)*(y2 - y1);
 
          distance = Math.sqrt(distancex + distancey);
-        return distance;
+        return Math.round(distance);
 
     }
 
