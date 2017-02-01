@@ -9,17 +9,18 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class GroupCreationTest {
+public class ContactCreation {
     FirefoxDriver wd;
+
 
     @BeforeMethod
     public void setUp() throws Exception {
-       // System.setProperty("webdriver.gecko.driver", "C://Windows/geckodriver.exe");
+        //System.setProperty("webdriver.gecko.driver", "C://Windows/geckodriver.exe");
         wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook/group.php");
         //login
-        login("admin","secret");
+        login("admin", "secret");
     }
 
     public void login(String userName, String password) {
@@ -34,54 +35,42 @@ public class GroupCreationTest {
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
     }
 
-
     @Test
-    //Fixture . Test between Before and After Method
-    public void testGroupCreation() {
+    public void contactCreation() {
+        initNewContact();
+        addNewContact(new ContactData("Maria", "Laboada"));
+        returnBack();
 
-        goToGroupPage();
-        initGroupCreation();
-        fillGroupForm(new GroupData("test1","test2","test3"));
-        submitGroupCreation();
-        returnToGroupPage();
-    }
-//Refactoring is highlighting of support Methods
-    private void returnToGroupPage() {
-        wd.findElement(By.linkText("group page")).click();
     }
 
-    private void submitGroupCreation() {
-        wd.findElement(By.name("submit")).click();
+    private void initNewContact() {
+        wd.findElement(By.linkText("add new")).click();
     }
 
-    private void fillGroupForm(GroupData groupData) {
-        wd.findElement(By.name("group_name")).click();
-        wd.findElement(By.name("group_name")).clear();
-        wd.findElement(By.name("group_name")).sendKeys(groupData.getName());
-        wd.findElement(By.name("group_header")).click();
-        wd.findElement(By.name("group_header")).clear();
-        wd.findElement(By.name("group_header")).sendKeys(groupData.getHeader());
+    private void returnBack() {
+        wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+    }
 
-        wd.findElement(By.name("group_footer")).click();
-        wd.findElement(By.name("group_footer")).clear();
-        wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
+    private void addNewContact(ContactData contactData) {
+
+        wd.findElement(By.name("firstname")).click();
+        wd.findElement(By.name("firstname")).clear();
+        wd.findElement(By.name("firstname")).sendKeys(contactData.getFirstName());
+        wd.findElement(By.name("lastname")).click();
+        wd.findElement(By.name("lastname")).clear();
+        wd.findElement(By.name("lastname")).sendKeys(contactData.getLastName());
+        wd.findElement(By.name("theform")).click();
+        if (!wd.findElement(By.xpath("//div[@id='content']/form/select[5]//option[2]")).isSelected()) {
+            wd.findElement(By.xpath("//div[@id='content']/form/select[5]//option[2]")).click();
+        }
     }
 
 
-
-    private void initGroupCreation() {
-        wd.findElement(By.name("new")).click();
-    }
-
-    private void goToGroupPage() {
-        wd.findElement(By.linkText("groups")).click();
-    }
 
     @AfterMethod
     public void tearDown() {
         wd.quit();
     }
-
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
             wd.switchTo().alert();
