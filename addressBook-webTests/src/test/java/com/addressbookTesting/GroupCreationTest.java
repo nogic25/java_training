@@ -1,5 +1,6 @@
 package com.addressbookTesting;
 
+import com.addressbookTesting.model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
