@@ -6,14 +6,16 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Created by anastasiyam on 2/2/2017.
  */
-public class NavigatioToGroup {
+public class NavigationGroup extends HelperBase{
     private FirefoxDriver wd;
 
-    public NavigatioToGroup(FirefoxDriver wd) {
-        this.wd=wd;
+    public NavigationGroup(FirefoxDriver wd) {
+        super(wd);
     }
 
     public void goToGroupPage() {
-        wd.findElement(By.linkText("groups")).click();
+        click(By.linkText("groups"));
     }
 }
+
+

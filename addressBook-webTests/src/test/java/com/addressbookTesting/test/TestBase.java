@@ -8,12 +8,14 @@ import org.testng.annotations.BeforeMethod;
  * Created by anastasiyam on 2/2/2017.
  */
 public class TestBase {
-//delegetion instead of inheritance. In order to accomplish this will be build a new reference to the object
+    //delegetion instead of inheritance. In order to accomplish this will be build a new reference to the object
     protected final ApplicationManager app = new ApplicationManager();
 
+
     @BeforeMethod
+    // here we first conducted inheritance and then delegetion. Apparently object of the ApplicationManager class runs certain methods
     public void setUp() throws Exception {
-       // System.setProperty("webdriver.gecko.driver", "C://Windows/geckodriver.exe");
+        // System.setProperty("webdriver.gecko.driver", "C://Windows/geckodriver.exe");
         app.init();
     }
 
@@ -21,5 +23,6 @@ public class TestBase {
     public void tearDown() {
         app.stop();
     }
+
 
 }

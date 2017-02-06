@@ -7,47 +7,38 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 /**
  * Created by anastasiyam on 2/2/2017.
  */
-public class GroupHelper {
-   private FirefoxDriver wd;
+public class GroupHelper extends HelperBase {
 
     public GroupHelper(FirefoxDriver wd) {
-        this.wd=wd;
+        super(wd);
     }
 
     //Refactoring is highlighting of support Methods
     public void returnToGroupPage() {
             wd.findElement(By.linkText("group page")).click();
         }
-
+//optimize the code. Repeatable items should be moved to the new methods with parameters
     public void submitGroupCreation() {
-        wd.findElement(By.name("submit")).click();
-    }
-    public GroupHelper() {
+        click(By.name("submit"));
     }
 
     public void fillGroupForm(GroupData groupData) {
-        wd.findElement(By.name("group_name")).click();
-        wd.findElement(By.name("group_name")).clear();
-        wd.findElement(By.name("group_name")).sendKeys(groupData.getName());
-        wd.findElement(By.name("group_header")).click();
-        wd.findElement(By.name("group_header")).clear();
-        wd.findElement(By.name("group_header")).sendKeys(groupData.getHeader());
+        type(By.name("group_name"), groupData.getName());
+        type(By.name("group_name"), groupData.getHeader());
+        type(By.name("group_name"), groupData.getFooter());
 
-        wd.findElement(By.name("group_footer")).click();
-        wd.findElement(By.name("group_footer")).clear();
-        wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
     }
 
     public void initGroupCreation() {
-        wd.findElement(By.name("new")).click();
+        click(By.name("new"));
     }
 
     //this method can be used by methods from the same class or by methods enherited the class
     public void deleteSelectedGroups() {
-        wd.findElement(By.name("delete")).click();
+        click(By.name("delete"));
     }
 
     public void selectGroup() {
-        wd.findElement(By.name("selected[]")).click();
+        click(By.name("selected[]"));
     }
 }

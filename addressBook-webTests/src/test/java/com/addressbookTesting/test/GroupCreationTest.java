@@ -10,7 +10,7 @@ public class GroupCreationTest extends TestBase{
     //Fixture . Test between Before and After Method
     public void testGroupCreation() {
 
-        app.getNavigatioToGroup().goToGroupPage();
+        app.getNavigationToGroup().goToGroupPage();
         app.getGroupHelper().initGroupCreation();
         app.getGroupHelper().fillGroupForm(new GroupData("test1","test2","test3"));
         app.getGroupHelper().submitGroupCreation();

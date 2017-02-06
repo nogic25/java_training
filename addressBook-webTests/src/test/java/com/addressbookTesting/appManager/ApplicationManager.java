@@ -8,30 +8,28 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by anastasiyam on 2/2/2017.
  */
-public class ApplicationManager {
+public class ApplicationManager  {
+
     FirefoxDriver wd;
-
-
+//to delegate methods to specific classes. First create class, extend class, pull members up, replace inheritance to delegation
+// refactor. Create a new reference to the class object, create the constructor
+    private  ContactHelper contactHelper;
     private SessionHelper sessionHelper;
-    private  NavigatioToGroup navigatioToGroup;
+    private NavigationGroup navigatioToGroup;
     private GroupHelper groupHelper;
+    private NavigationToContact navigationToContact;
 
-    public static boolean isAlertPresent(FirefoxDriver wd) {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
+
 
         public void init() {
             wd = new FirefoxDriver();
-        wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+            wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             wd.get("http://localhost/addressbook/group.php");
             groupHelper = new GroupHelper(wd);
-            navigatioToGroup = new NavigatioToGroup(wd);
+            navigatioToGroup = new NavigationGroup(wd);
             sessionHelper=new SessionHelper(wd);
+            contactHelper = new ContactHelper(wd);
+            navigationToContact=new NavigationToContact(wd);
             //login
             sessionHelper.login("admin","secret");
     }
@@ -40,12 +38,17 @@ public class ApplicationManager {
     public void stop() {
         wd.quit();
     }
-
+//methods which are used in tests
     public GroupHelper getGroupHelper() {
         return groupHelper;
     }
 
-    public NavigatioToGroup getNavigatioToGroup() {
+    public NavigationGroup getNavigationToGroup() {
         return navigatioToGroup;
     }
+
+    public ContactHelper getContactHelper() {return contactHelper;}
+
+    public NavigationToContact getNavigationToContact() {return navigationToContact;}
 }
+
