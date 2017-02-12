@@ -1,6 +1,5 @@
 apply plugin: 'java'
-apply plugin: 'application'
-mainClassName="FirstProgram"
+
 
 version = '1.0'
 sourceCompatibility = 1.7
@@ -26,5 +25,5 @@ repositories {
 dependencies {
 
     compile 'org.testng:testng:6.10'
-    ompile 'org.seleniumhq.selenium:selenium-java:3.0.0'
+    compile 'org.seleniumhq.selenium:selenium-java:2.53.1'
 }

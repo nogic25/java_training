@@ -1,7 +1,7 @@
 package com.addressbookTesting.appManager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
 
 /**
  * Created by anastasiyam on 2/2/2017.
@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class SessionHelper extends HelperBase {
 
 
-    public SessionHelper(FirefoxDriver wd) {
+    public SessionHelper(WebDriver wd) {
         super(wd);
     }
 
