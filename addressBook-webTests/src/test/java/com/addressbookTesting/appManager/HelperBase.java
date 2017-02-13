@@ -2,6 +2,7 @@ package com.addressbookTesting.appManager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -19,9 +20,27 @@ public class HelperBase {
     }
 
     protected void type(By locator, String text) {
-        wd.findElement(locator).click();
-        wd.findElement(locator).clear();
-        wd.findElement(locator).sendKeys(text);
+
+    click (locator);
+        //if value in the field is not empty fill it up with data, otherwise leave it.
+        if (text !=null){
+            String existingText=wd.findElement(locator).getAttribute("value");
+            //if new text which you want to type is != to the existing text , continue typing. Otherwise by pass this step.
+            if (!text.equals(existingText)) {
+                wd.findElement(locator).clear();
+                wd.findElement(locator).sendKeys(text);
+            }
+        }
+
+    }
+    //catch the exception in case such dropdown doesn't exit
+    public boolean isElementPresent(By locator) {
+        try {
+            wd.findElement(locator);
+            return true;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
     }
 
     public boolean isAlertPresent() {
@@ -32,5 +51,6 @@ public class HelperBase {
             return false;
         }
     }
+
 
 }

@@ -4,11 +4,13 @@ public class ContactData {
     private final String userName;
     private final String lastName;
     private final String phoneNumber;
+    private String group;
 
-    public ContactData(String userName, String lastName, String PhoneNumber) {
+    public ContactData(String userName, String lastName, String PhoneNumber, String Group) {
         this.userName = userName;
         this.lastName = lastName;
-        phoneNumber = PhoneNumber;
+        this.phoneNumber = PhoneNumber;
+        this.group = Group;
     }
 
     public String getUserName() {
@@ -21,5 +23,9 @@ public class ContactData {
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public String getGroup() {
+        return group;
     }
 }
