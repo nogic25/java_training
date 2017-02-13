@@ -42,4 +42,19 @@ public class ContactHelper extends HelperBase {
     public void SubmitGroupModification() {
         click(By.xpath("//div[@id='content']/form[1]/input[22]"));
     }
+
+    public void createContact(ContactData contact,boolean creation) {
+
+      createNewContact(contact,creation);
+      submitContactCreation();
+
+    }
+
+    public boolean isThereContact() {
+        return(isElementPresent(By.name("selected[]")));
+    }
+
+    public void selectContact() {
+        click(By.name("selected[]"));
+    }
 }

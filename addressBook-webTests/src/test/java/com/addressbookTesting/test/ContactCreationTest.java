@@ -11,8 +11,7 @@ public class ContactCreationTest extends TestBase{
         app.getNavigationToGroup().goToAddContact();
 
         //create additional class for data. Create a new class which would have a constructor and then pass it in the method
-        app.getContactHelper().createNewContact(new ContactData("Kostia", "Motalava", "3421234567","test1"),true);
-        app.getContactHelper().submitContactCreation();
+        app.getContactHelper().createContact(new ContactData("Anastasiya", "Motalava", "3421234567","test1"),true);
 
         }
 

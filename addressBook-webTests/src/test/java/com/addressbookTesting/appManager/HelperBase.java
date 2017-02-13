@@ -23,7 +23,7 @@ public class HelperBase {
 
         click (locator);
         //if value in the field is not empty fill it up with data, otherwise leave it.
-        
+
         if (text !=null){
             String existingText=wd.findElement(locator).getAttribute("value");
 
