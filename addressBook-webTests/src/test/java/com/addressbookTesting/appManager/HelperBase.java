@@ -21,10 +21,12 @@ public class HelperBase {
 
     protected void type(By locator, String text) {
 
-    click (locator);
+        click (locator);
         //if value in the field is not empty fill it up with data, otherwise leave it.
+        
         if (text !=null){
             String existingText=wd.findElement(locator).getAttribute("value");
+
             //if new text which you want to type is != to the existing text , continue typing. Otherwise by pass this step.
             if (!text.equals(existingText)) {
                 wd.findElement(locator).clear();
