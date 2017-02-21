@@ -75,14 +75,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testEquation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testEquation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/training/testEquation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            <state relative-caret-position="400">
+              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Prime.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/Prime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollectionArray.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/CollectionArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrimeTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/training/PrimeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/Point.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -371,6 +415,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/training/testEquation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/Equation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/Equality.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/training/TestPrimes.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/training/PrimeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/Prime.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/CollectionArray.java" />
       </list>
     </option>
   </component>
@@ -382,10 +430,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1046" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1919" />
+    <option name="height" value="1022" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -492,8 +540,28 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../addressBook-webTests/Build.gradle" />
   </component>
-  <component name="RunManager" selected="Application.Equality">
-    <configuration default="false" name="testEquation" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.CollectionArray">
+    <configuration default="false" name="Equality" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.training.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.training.Equality" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SandBox_main" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestPrimes" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.training.*" />
@@ -505,7 +573,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.training" />
-      <option name="MAIN_CLASS_NAME" value="com.training.testEquation" />
+      <option name="MAIN_CLASS_NAME" value="com.training.TestPrimes" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -526,7 +594,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="testEquation.testLinear" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestPrimes.TestPrimes" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.training.*" />
@@ -538,8 +606,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.training" />
-      <option name="MAIN_CLASS_NAME" value="com.training.testEquation" />
-      <option name="METHOD_NAME" value="testLinear" />
+      <option name="MAIN_CLASS_NAME" value="com.training.TestPrimes" />
+      <option name="METHOD_NAME" value="TestPrimes" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -559,7 +627,7 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="testEquation.testConstant" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="PrimeTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.training.*" />
@@ -571,10 +639,10 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.training" />
-      <option name="MAIN_CLASS_NAME" value="com.training.testEquation" />
-      <option name="METHOD_NAME" value="testConstant" />
+      <option name="MAIN_CLASS_NAME" value="com.training.PrimeTest" />
+      <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -592,14 +660,14 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="Equality" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CollectionArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.training.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.training.Equality" />
+      <option name="MAIN_CLASS_NAME" value="com.training.CollectionArray" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -856,18 +924,20 @@
       <listeners />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.testEquation" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.testEquation.testLinear" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.testEquation.testConstant" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Equality" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.Equality" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.TestPrimes" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.TestPrimes.TestPrimes" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.PrimeTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CollectionArray" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Equality" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.testEquation.testConstant" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.testEquation.testLinear" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.testEquation" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.CollectionArray" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.PrimeTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.TestPrimes.TestPrimes" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.TestPrimes" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Equality" />
       </list>
     </recent_temporary>
   </component>
@@ -888,8 +958,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testEquation - 2017.02.11 at 20h 32m 32s.xml">
-      <configuration name="testEquation" configurationId="TestNG" />
+    <history-entry file="PrimeTest - 2017.02.19 at 22h 55m 44s.xml">
+      <configuration name="PrimeTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PrimeTest - 2017.02.19 at 22h 56m 36s.xml">
+      <configuration name="PrimeTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PrimeTest - 2017.02.19 at 22h 56m 49s.xml">
+      <configuration name="PrimeTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="PrimeTest - 2017.02.19 at 23h 07m 57s.xml">
+      <configuration name="PrimeTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestPrimes - 2017.02.19 at 22h 53m 06s.xml">
+      <configuration name="TestPrimes" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestPrimes_TestPrimes - 2017.02.19 at 22h 54m 33s.xml">
+      <configuration name="TestPrimes.TestPrimes" configurationId="TestNG" />
     </history-entry>
     <history-entry file="testEquation - 2017.02.11 at 21h 05m 56s.xml">
       <configuration name="testEquation" configurationId="TestNG" />
@@ -905,7 +990,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1046" extended-state="6" />
+    <frame x="1" y="1" width="1919" height="1022" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -916,11 +1001,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33859223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25287357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1039,8 +1124,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/training/testEquation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+        <state relative-caret-position="400">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/PrimeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/Prime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/CollectionArray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
