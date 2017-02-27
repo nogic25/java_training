@@ -3,8 +3,12 @@ package com.addressbookTesting.appManager;
 import com.addressbookTesting.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by anastasiyam on 2/5/2017.
@@ -16,14 +20,15 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
-    public void createNewContact(ContactData contactData,boolean creation) {
+    public void createNewContact(ContactData contactData, boolean creation) {
         type(By.name("firstname"), contactData.getUserName());
         type(By.name("lastname"), contactData.getLastName());
         type(By.name("mobile"), contactData.getPhoneNumber());
-        if (creation){
+        if (creation) {
             new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-        }else
-           Assert.assertFalse(isElementPresent(By.name("new_group"))); {
+        } else
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
+        {
             //click,select from the dropDOwn list
 
         }
@@ -43,18 +48,31 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//div[@id='content']/form[1]/input[22]"));
     }
 
-    public void createContact(ContactData contact,boolean creation) {
+    public void createContact(ContactData contact, boolean creation) {
 
-      createNewContact(contact,creation);
-      submitContactCreation();
+        createNewContact(contact, creation);
+        submitContactCreation();
 
     }
 
     public boolean isThereContact() {
-        return(isElementPresent(By.name("selected[]")));
+        return (isElementPresent(By.name("selected[]")));
     }
 
     public void selectContact() {
         click(By.name("selected[]"));
+    }
+
+    public List<ContactData> getContactList() {
+        List<ContactData> contacts = new ArrayList<ContactData>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("tr.name"));
+        for (WebElement element : elements) {
+            String userName = element.getText();
+            //convert String type to int -use Integer.parseInt
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("id"));
+            ContactData contact = new ContactData(id,userName,null,null,null);
+           contacts.add(contact);
+        }
+        return contacts;
     }
 }
