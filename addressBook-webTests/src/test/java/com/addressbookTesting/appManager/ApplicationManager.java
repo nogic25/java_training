@@ -25,7 +25,7 @@ public class ApplicationManager {
     private String firefox;
     private NavigationHelper navigationHelper;
 
-    public ApplicationManager(String browser) {
+    public  ApplicationManager(String browser) {
         this.browser = browser;
     }
 

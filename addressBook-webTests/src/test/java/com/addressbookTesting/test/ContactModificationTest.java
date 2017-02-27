@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
  * Created by anastasiyam on 2/12/2017.
  */
 public class ContactModificationTest extends TestBase {
-@Test
+@Test(enabled=false)
     public void testContactModification() {
 
         app.getNavigationHelper().goToHomePage();
