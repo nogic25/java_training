@@ -13,12 +13,13 @@ public class GroupCreationTest extends TestBase {
     @Test
     //Fixture . Test between Before and After Method
     public void testGroupCreation() {
-        app.getNavigationToGroup().goToGroupPage();
+        app.goToGroup().GroupPage();
         //creating the list of groups
-        List<GroupData> before = app.getGroupHelper().getGroupList();
-        GroupData group = new GroupData("Clients", null, null);
-        app.getGroupHelper().createGroup(group);
-        List<GroupData> after = app.getGroupHelper().getGroupList();
+        List<GroupData> before = app.getGroupHelper().list();
+
+        GroupData group = new GroupData().withName("test1");
+        app.getGroupHelper().create(group);
+        List<GroupData> after = app.getGroupHelper().list();
         Assert.assertEquals(after.size(), before.size() + 1);
 
 

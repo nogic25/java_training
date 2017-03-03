@@ -8,14 +8,16 @@ import java.util.List;
 
 public class ContactCreationTest extends TestBase{
 
-    @Test(enabled=false)
+    @Test   //(enabled=false)
 
         public void testContactCreation() {
-        app.getNavigationToGroup().goToAddContact();
+
+        app.getNavigationHelper().goToHomePage();
 
         //create additional class  data. Create a new class which would have a constructor and then pass it in the method
         List<ContactData> before = app.getContactHelper().getContactList();
         ContactData contact= new ContactData("Kostia", "Motalava", "3421234567","Clients");
+        app.getNavigationHelper().goToAddContact();
         app.getContactHelper().createContact((contact),true);
         List<ContactData> after = app.getContactHelper().getContactList();
        // Assert.assertEquals(after.size(), before.size() +1);
@@ -27,6 +29,7 @@ public class ContactCreationTest extends TestBase{
         //Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
        // Assert.assertEquals(before ,after);
     }
+
 }
 
 

@@ -20,7 +20,7 @@ public class ApplicationManager {
     // refactor. Create a new reference to the class object, create the constructor
     private ContactHelper contactHelper;
     private SessionHelper sessionHelper;
-    private NavigationHelper navigatioToGroup;
+    private NavigationHelper navigationToGroup;
     private GroupHelper groupHelper;
     private String firefox;
     private NavigationHelper navigationHelper;
@@ -42,7 +42,7 @@ public class ApplicationManager {
         wd.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         wd.get("http://localhost/addressbook");
         groupHelper = new GroupHelper(wd);
-        navigatioToGroup = new NavigationHelper(wd);
+        navigationToGroup = new NavigationHelper(wd);
         sessionHelper = new SessionHelper(wd);
         contactHelper = new ContactHelper(wd);
         navigationHelper = new NavigationHelper(wd);
@@ -57,12 +57,12 @@ public class ApplicationManager {
     }
 
     //methods which are used in tests
-    public GroupHelper getGroupHelper() {
+    public GroupHelper   getGroupHelper() {
         return groupHelper;
     }
 
-    public NavigationHelper getNavigationToGroup() {
-        return navigatioToGroup;
+    public NavigationHelper goToGroup() {
+        return navigationToGroup;
     }
 
     public ContactHelper getContactHelper() {

@@ -15,27 +15,25 @@ public class GroupModificationsTest extends TestBase {
 @Test
     public void testGroupModification(){
 
-    app.getNavigationToGroup().goToGroupPage();
+    app.goToGroup().GroupPage();
 
     if(! app.getGroupHelper().isThereGroup()){
-        app.getGroupHelper().createGroup(new GroupData("Friends",null,null));
+        app.getGroupHelper().create(new GroupData().withName("test1"));
     }
-    List<GroupData> before=app.getGroupHelper().getGroupList();
+    List<GroupData> before=app.getGroupHelper().list();
+    int index=before.size()-1;
+    //using cascades
+    GroupData groupMod=new GroupData()
+            .withId(before.get(index).getId()).withName("test1").withHeader("test2").withFooter("test3");
     //int before= app.getGroupHelper().getGroupCount();
-    app.getGroupHelper().selectGroup(before.size()-1);
-    app.getGroupHelper().initGroupModification();
-    //obtain ID from the lest group
-    GroupData groupMod=new GroupData(before.get(before.size()-1).getId(),"Co-Workers","test1","test1");
-    app.getGroupHelper().fillGroupForm(groupMod);
-    app.getGroupHelper().submitGroupModification();
-    app.getGroupHelper().returnToGroupPage();
-    List<GroupData> after=app.getGroupHelper().getGroupList();
+    app.getGroupHelper().modifiedGroup(index,groupMod);
+    List<GroupData> after=app.getGroupHelper().list();
     //int after= app.getGroupHelper().getGroupCount();
     Assert.assertEquals(after.size(),before.size());
     //check if both list are consistent
     //before.remove(before.size()-1);
     // Множества: неупорядоченные коллекции
-    before.remove(before.size()-1);
+    before.remove(index);
     before.add(groupMod);
 
     Comparator<? super GroupData> byId=(g1,g2)->Integer.compare(g1.getId(),g2.getId());
@@ -45,4 +43,6 @@ public class GroupModificationsTest extends TestBase {
     Assert.assertEquals(after,before);
 
 }
+
+
 }
